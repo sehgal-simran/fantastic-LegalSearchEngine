@@ -1,0 +1,92 @@
+<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class ="filter">
+    
+    <form class="example" action="askquery?query=murder&" method="get" >
+        <head>
+            <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/searchcss.css') }}">
+        </head>
+    <label class="container">Query
+    </label>
+    <br>
+    <input type="text" placeholder="QuerySearch.." name="query">
+    <br>
+    <br>
+    <label class="container">Date
+    </label>
+    <br>
+    <input type="text" placeholder="Search By Date.." name="date">
+    <br>
+    <br>
+    <label class="container">Appeal Number
+      <!--input type="checkbox"-->
+      <!--span class="checkmark"></span-->
+    </label>
+    <br>
+    <input type="text" placeholder="Search By Appeal Number.." name="appeal_no">
+    <br>
+    <br>
+    <label class="container">Appellate
+    </label>
+    <br>
+    <input type="text" placeholder="Search By Appellate.." name="appellate">
+    <br>
+    <br>
+    <button type="submit" class="submitbutton"><i class="fa fa-search"></i></button>  
+    
+    </form>
+    <form class="example" action="download?" method="get" >
+        <head>
+            <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/searchcss.css') }}">
+        </head>
+    <br>
+    <br>
+    <label class="container">Download A File
+    </label>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter name of doc to download.." name="doc">
+    <br>
+    <br>
+    <button type="submit" class="submitbutton">Download</button>  
+    
+    </form>
+
+    
+    <form class="example" action="alldocs" method="get" >
+        <head>
+            <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/searchcss.css') }}">
+        </head>
+    <br>
+    <br>
+    <label class="container">All Documents
+    </label>
+    <br>
+    <!-- <br>
+    <input type="text" placeholder="Enter name of doc to download.." name="doc">
+    <br> -->
+    <br>
+    <button type="submit" class="submitbutton">See all docs</button>  
+    
+    </form>
+    <form class="example" action="docwise?" method="get" >
+       
+    <br>
+    <br>
+    <label class="container">Search document-wise
+    </label>
+    <br>
+    <br>
+    <input type="text" placeholder="Enter name of document.." name="doc">
+    <br>
+    <br>
+    <button type="submit" class="submitbutton" name="judgement">Judgement</button>
+    <button type="submit" class="submitbutton" name="penalCode">Penal Code</button>
+    <button type="submit" class="submitbutton" name="date">Date</button>
+    <button type="submit" class="submitbutton" name="appellate">Appellate</button>
+    
+    </form>
+    
+</div>
