@@ -5,20 +5,18 @@ The code has been tested on a dataset of legal cases procured online, and can be
 Keep the dataset in the outer directory with python code and operate.
 
 - api.py has 3 views/APIs and a homepage:
+Home:           Lets user enter their search query and filter by data/Appeal Number/Appellate. The filtering is done on an or
+                basis and will return results for (Query && (Date Or Appeal Number or Appellate))
+            
+api_query:      Takes text query and/or filter information from user and uses pre-computed posting lists to rank the document set. Filters are 
+                implemented by writing individual logic to extract data/appeal number etc. Other features extracted which will be 
+                integrated with the system in the future are: Citation, Citator Info, Whether the appeal was dismissed or allowed, Criminal/Civil Appellate Jurisdiction 
+                By whom the Judgment of the Court was delivered by, Appellant, Respondent, Appeal number, Mention of constitutional acts, No order as to costs.
+                This API returns the list of top 10 documents.
 
-    Home:search Lets user enter their search query and filter by data/Appeal Number/Appellate. The filtering is done on an or
-            basis and will return results for (Query && (Date Or Appeal Number or Appellate))
+api_all:        API to return list of all docs available
 
-    api_query: Takes text query and/or filter information from user and uses pre-computed posting lists to rank the document set. Filters are 
-            implemented by writing individual logic to extract data/appeal number etc. Other features extracted which will be 
-            integrated with the system in the future are: Citation, Citator Info, Whether the appeal was dismissed or allowed, Criminal/Civil Appellate Jurisdiction 
-            By whom the Judgment of the Court was delivered by, Appellant, Respondent, Appeal number, Mention of constitutional acts, No order as to costs.
-            This API returns the list of top 10 documents.
-
-
-    api_all:    API to return list of all docs available
-
-    download_file: API for user to download the requested document
+download_file:  API for user to download the requested document
 
 
 - templates has html files for basic UI. UI is to be updated and improved post midsem to include data visualisations and a short bullet-form view
